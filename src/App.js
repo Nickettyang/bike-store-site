@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import background from "./images/bicycle-1-800x800.jpg";
+import Navbar from "./components/Navbar";
+import Landingpage from "./pages/Landingpage";
+import Newarrivals from "./pages/Newarrivals";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div
+        className="bg-cover bg-center h-screen bg-black"
+        style={{ backgroundImage: `url(${background})` }}
+      >
+        {/* Navbar */}
+        <Navbar />
+        <Landingpage />
+      </div>
+      <div>
+        <Newarrivals />
+      </div>
     </div>
   );
 }
