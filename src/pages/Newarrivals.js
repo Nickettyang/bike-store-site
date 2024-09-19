@@ -12,7 +12,7 @@ const Newarrivals = () => {
       <div className=" min-h-screen flex items-center justify-center">
         <div className="grid grid-cols-12 gap-20 p-4">
           <div className="col-span-3">
-            <img src={image1} alt="" />
+            <img src={image1} alt="" className="hover:cursor-pointer" />
             <div className="italic">
               Bicycles <br />
               <div className="py-3 italic font-bold">Kryo-X26-Model-K</div>
@@ -21,7 +21,7 @@ const Newarrivals = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <img src={image2} alt="" />
+            <img src={image2} alt="" className="hover:cursor-pointer" />
             <div className="italic">
               Bicycles <br />
               <div className="py-3 italic font-bold">Kryo-X26-Model-K</div>
@@ -30,7 +30,7 @@ const Newarrivals = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <img src={image3} alt="" />
+            <img src={image3} alt="" className="hover:cursor-pointer" />
             <div className="italic">
               Bicycles <br />
               <div className="py-3 italic font-bold">Kryo-X26-Model-K</div>
@@ -39,7 +39,7 @@ const Newarrivals = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <img src={image4} alt="" />
+            <img src={image4} alt="" className="hover:cursor-pointer" />
             <div className="italic">
               Bicycles <br />
               <div className="py-3 italic font-bold">Kryo-X26-Model-K</div>
