@@ -5,7 +5,7 @@ import image4 from "../images/bicycle-7-800x800.jpg";
 
 const Newarrivals = () => {
   return (
-    <div>
+    <div id="Bicycles">
       <h1 className="text-center bg-white pt-5 font-black text-3xl">
         New Arrivals
       </h1>

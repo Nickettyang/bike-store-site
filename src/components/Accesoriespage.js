@@ -5,7 +5,7 @@ import image11 from "../images/accessories-5-800x800.jpg";
 
 const Accesoriespage = () => {
   return (
-    <div>
+    <div id="Accesories">
       <h1 className="text-3xl font-bold text-center py-3 pt-2">
         Explore Accesories
       </h1>

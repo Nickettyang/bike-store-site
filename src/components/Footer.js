@@ -9,30 +9,30 @@ const Footer = () => {
             <img src={logo} alt="" />
           </div>
           <div className="col-span-3  px-10">
-            <h1 className="font-bold text-3xl mb-5"> Useful Links </h1>
+            <h1 className="font-bold text-3xl mb-5 italic"> Useful Links </h1>
             <ul>
-              <li className="p-2 hover:cursor-pointer">Home</li>
-              <li className="p-2 hover:cursor-pointer">Shop</li>
-              <li className="p-2 hover:cursor-pointer">About Us</li>
-              <li className="p-2 hover:cursor-pointer">Contact Us</li>
+              <li className="p-1 hover:cursor-pointer hover:text-red-600 font-bold">Home</li>
+              <li className="p-1 hover:cursor-pointer hover:text-red-600 font-bold">Shop</li>
+              <li className="p-1 hover:cursor-pointer hover:text-red-600 font-bold">About Us</li>
+              <li className="p-1 hover:cursor-pointer hover:text-red-600 font-bold">Contact Us</li>
             </ul>
           </div>
           <div className="col-span-3  px-10">
-            <h3 className="font-bold text-3xl mb-5">Our Collection</h3>
+            <h3 className="font-bold text-3xl mb-5 italic">Our Collection</h3>
             <ul>
-              <li className="p-2 hover:cursor-pointer">Mountain</li>
-              <li className="p-2 hover:cursor-pointer">City</li>
-              <li className="p-2 hover:cursor-pointer">Specialty</li>
-              <li className="p-2 hover:cursor-pointer">Electric</li>
+              <li className="p-1 hover:cursor-pointer hover:text-red-600 font-bold">Mountain</li>
+              <li className="p-1 hover:cursor-pointer hover:text-red-600 font-bold">City</li>
+              <li className="p-1 hover:cursor-pointer hover:text-red-600 font-bold">Specialty</li>
+              <li className="p-1 hover:cursor-pointer hover:text-red-600 font-bold">Electric</li>
             </ul>
           </div>
           <div className="col-span-3  px-10">
-            <h3 className="font-bold text-3xl mb-5">Accounts </h3>
+            <h3 className="font-bold text-3xl mb-5 italic">Accounts </h3>
             <ul>
-              <li className="p-2 hover:cursor-pointer">Customer Login</li>
-              <li className="p-2 hover:cursor-pointer">Dealer Login</li>
-              <li className="p-2 hover:cursor-pointer">Addresses</li>
-              <li className="p-2 hover:cursor-pointer">Payment methods</li>
+              <li className="p-1 hover:cursor-pointer hover:text-red-600 font-bold">Customer Login</li>
+              <li className="p-1 hover:cursor-pointer hover:text-red-600 font-bold">Dealer Login</li>
+              <li className="p-1 hover:cursor-pointer hover:text-red-600 font-bold">Addresses</li>
+              <li className="p-1 hover:cursor-pointer hover:text-red-600 font-bold">Payment methods</li>
             </ul>
           </div>
 
