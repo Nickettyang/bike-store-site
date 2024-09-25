@@ -2,6 +2,7 @@ import image8 from "../images/accessories-3-800x800.jpg";
 import image9 from "../images/accessories-4-800x800.jpg";
 import image10 from "../images/accessories-4-800x800(1).jpg";
 import image11 from "../images/accessories-5-800x800.jpg";
+import { Link } from "react-router-dom";
 
 const Accesoriespage = () => {
   return (
@@ -12,7 +13,7 @@ const Accesoriespage = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="grid grid-cols-12 gap-3">
           <div className="col-span-3">
-            <img src={image8} alt="" className="hover:cursor-pointer"/>
+            <Link to="/acc1"><img src={image8} alt="" className="hover:cursor-pointer"/></Link>
             <div className="italic">
               Accesories <br />
               <div className="py-3 italic font-bold">Bicycle Gloves red</div>
@@ -32,7 +33,7 @@ const Accesoriespage = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <img src={image9} alt="" className="hover:cursor-pointer"/>
+            <Link to="acc2"><img src={image9} alt="" className="hover:cursor-pointer"/></Link>
             <div className="italic">
               Accesories <br />
               <div className="py-3 italic font-bold">Bicycle Gloves blue</div>
@@ -52,7 +53,7 @@ const Accesoriespage = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <img src={image10} alt="" className="hover:cursor-pointer"/>
+            <Link to="acc3"><img src={image10} alt="" className="hover:cursor-pointer"/></Link>
             <div className="italic">
               Accesories <br />
               <div className="py-3 italic font-bold">Bicycle Gloves gold</div>
@@ -72,7 +73,7 @@ const Accesoriespage = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <img src={image11} alt="" className="hover:cursor-pointer"/>
+            <Link to="acc4"><img src={image11} alt="" className="hover:cursor-pointer"/></Link>
             <div className="italic">
               Accesories <br />
               <div className="py-3 italic font-bold">Bicycle Gloves pink</div>

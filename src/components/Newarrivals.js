@@ -2,6 +2,7 @@ import image1 from "../images/bicycle-1-800x800.jpg";
 import image2 from "../images/bicycle-4-800x800.jpg";
 import image3 from "../images/bicycle-5-800x800.jpg";
 import image4 from "../images/bicycle-7-800x800.jpg";
+import { Link } from "react-router-dom";
 
 const Newarrivals = () => {
   return (
@@ -12,7 +13,7 @@ const Newarrivals = () => {
       <div className=" min-h-screen flex items-center justify-center">
         <div className="grid grid-cols-12 gap-20 p-4">
           <div className="col-span-3">
-            <img src={image1} alt="" className="hover:cursor-pointer" />
+            <Link to="/bike1"><img src={image1} alt="" className="hover:cursor-pointer" /></Link>
             <div className="italic">
               Bicycles <br />
               <div className="py-3 italic font-bold">Kryo-X26-Model-K</div>
@@ -21,7 +22,7 @@ const Newarrivals = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <img src={image2} alt="" className="hover:cursor-pointer" />
+            <Link to="/bike2"><img src={image2} alt="" className="hover:cursor-pointer" /></Link>
             <div className="italic">
               Bicycles <br />
               <div className="py-3 italic font-bold">Kryo-X26-Model-K</div>
@@ -30,7 +31,7 @@ const Newarrivals = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <img src={image3} alt="" className="hover:cursor-pointer" />
+            <Link to="bike3"><img src={image3} alt="" className="hover:cursor-pointer" /></Link>
             <div className="italic">
               Bicycles <br />
               <div className="py-3 italic font-bold">Kryo-X26-Model-K</div>
@@ -39,7 +40,7 @@ const Newarrivals = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <img src={image4} alt="" className="hover:cursor-pointer" />
+            <Link to="bike4"><img src={image4} alt="" className="hover:cursor-pointer" /></Link>
             <div className="italic">
               Bicycles <br />
               <div className="py-3 italic font-bold">Kryo-X26-Model-K</div>
