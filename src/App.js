@@ -9,7 +9,7 @@ import Ecopage from "./components/Ecopage";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./pages/Cart";
-import Contact from "./pages/Contact";
+import ContactSection14 from "./pages/Contact";
 import Bike1 from "./pages/Bike1";
 import Bike2 from "./pages/Bike2";
 import Bike3 from "./pages/Bike3";
@@ -18,6 +18,7 @@ import Acc1 from "./pages/Acc1";
 import Acc2 from "./pages/Acc2";
 import Acc3 from "./pages/Acc3";
 import Acc4 from "./pages/Acc4";
+
 function App() {
   return (
     <Router>
@@ -25,7 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landingpage />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<ContactSection14 />} />
           <Route path="/bike1" element={<Bike1 />} />
           <Route path="/bike2" element={<Bike2 />} />
           <Route path="/bike3" element={<Bike3 />} />
