@@ -7,29 +7,34 @@ const Bike1 = () => {
       <div>
         <Navbar />
       </div>
-      <div className="flex itms-center justify-center">
-        <div className="grid grid-cols-12">
-          <div className="col-span-6">
-            <img src={image3} alt="" className="p-10 hover:cursor-pointer" />
+      <div className="flex items-center justify-center p-10">
+        <div className="grid grid-cols-12 gap-4">
+          <div className="col-span-6 flex justify-center">
+            <img
+              src={image3}
+              alt=""
+              className="max-w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
+            />
           </div>
-          <div className="col-span-6 p-6 font-bold">
-            <h1 className="text-3xl font-bold italic p-3">Kryo-X26-MB</h1>
-            <div className="p-3 font-semibold text-3xl">$350.00</div>
-            Unleash Your Adventure with the Kryo X26 Mountain Bike! Meet the
-            **Kryo X26 MB**—your ultimate companion for rugged trails and
-            breathtaking landscapes! With a lightweight aluminum frame and
-            advanced suspension, this bike delivers unmatched comfort and
-            control on any terrain. Conquer steep climbs and navigate rocky
-            paths effortlessly with its precision 21-speed gearing and
-            all-terrain tires that grip the ground with confidence. Stylish and
-            durable, the Kryo X26 isn’t just built for performance; it’s
-            designed to turn heads. Whether you’re an experienced rider or just
-            starting your journey, the Kryo X26 invites you to explore,
-            discover, and embrace every adventure.
-            <button className="rounded-lg border-2 p-3  bg-black font-bold text-white m-5">
+          <div className="col-span-6 p-6">
+            <h1 className="text-4xl font-bold italic mb-4 text-gray-900">
+              Kryo-X26-MB
+            </h1>
+            <div className="text-2xl font-semibold text-gray-800 mb-4">
+              $350.00
+            </div>
+
+            <p className="mb-6 text-gray-700 leading-relaxed">
+              Discover the <strong>Kryo X26 MB</strong>, your ideal companion for rugged trails!
+              With a lightweight aluminum frame and advanced suspension, it
+              offers comfort and control on any terrain. Conquer climbs
+              effortlessly with 21-speed gearing and all-terrain tires. Stylish
+              and durable, the Kryo X26 invites you to embrace every adventure!
+            </p>
+
+            <button className="bg-gray-800 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-gray-700 transition duration-300">
               ADD TO CART
             </button>
-            <div></div>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import Cart from "../pages/Cart";
 const Navbar = () => {
   return (
     <div className="flex justify-between pt-3 font-bold bg-black">
-      <img src={logo} alt="Logo" />
+      <Link to="/"><img src={logo} alt="Logo" /></Link>
       <ul className="text-white flex">
         <Link to="/">
           <li className="px-3 hover:cursor-pointer">HOME</li>

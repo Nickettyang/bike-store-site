@@ -10,7 +10,7 @@ const Newarrivals = () => {
       <h1 className="text-center bg-white pt-5 font-black text-3xl">
         New Arrivals
       </h1>
-      <div className=" min-h-screen flex items-center justify-center">
+      <div className=" min-h-screen flex items-center justify-center p-5">
         <div className="grid grid-cols-12 gap-20 p-4">
           <div className="col-span-3">
             <Link to="/bike1"><img src={image1} alt="" className="hover:cursor-pointer" /></Link>

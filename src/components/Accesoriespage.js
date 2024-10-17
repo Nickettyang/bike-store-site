@@ -10,7 +10,7 @@ const Accesoriespage = () => {
       <h1 className="text-3xl font-bold text-center py-3 pt-2">
         Explore Accesories
       </h1>
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center p-5">
         <div className="grid grid-cols-12 gap-3">
           <div className="col-span-3">
             <Link to="/acc1"><img src={image8} alt="" className="hover:cursor-pointer"/></Link>
