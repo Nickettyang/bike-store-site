@@ -1,6 +1,6 @@
 import logo from "../images/logo-1-80x48.png";
 import { Link } from "react-router-dom";
-import Cart from "../pages/Cart";
+// import Cart from "../pages/Cart";
 import background from "../images/pexels-jahangeer-bm-759527-1619299.jpg";
 import Navbar from "./Navbar";
 

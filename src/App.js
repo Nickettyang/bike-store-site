@@ -8,7 +8,7 @@ import Accesoriespage from "./components/Accesoriespage";
 import Ecopage from "./components/Ecopage";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Cart from "./pages/Cart";
+// import Cart from "./pages/Cart";
 import ContactSection14 from "./pages/Contact";
 import Bike1 from "./pages/Bike1";
 import Bike2 from "./pages/Bike2";
@@ -29,7 +29,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Landingpage />} />
-          <Route path="/cart" element={<Cart />} />
+          {/* <Route path="/cart" element={<Cart />} /> */}
           <Route path="/contact" element={<ContactSection14 />} />
           <Route path="/bike1" element={<Bike1 />} />
           <Route path="/bike2" element={<Bike2 />} />
