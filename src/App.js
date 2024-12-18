@@ -18,6 +18,10 @@ import Acc1 from "./pages/Acc1";
 import Acc2 from "./pages/Acc2";
 import Acc3 from "./pages/Acc3";
 import Acc4 from "./pages/Acc4";
+import Checkout from "./pages/Checkout";
+import ThankYou from "./pages/Thankyoupage";
+import { ToastContainer } from "react-toastify"; // Import ToastContainer
+import "react-toastify/dist/ReactToastify.css"; // Import toast styles
 
 function App() {
   return (
@@ -35,7 +39,15 @@ function App() {
           <Route path="/acc2" element={<Acc2 />} />
           <Route path="/acc3" element={<Acc3 />} />
           <Route path="/acc4" element={<Acc4 />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
+
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar={true}
+        />
       </main>
     </Router>
   );

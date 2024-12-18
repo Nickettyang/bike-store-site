@@ -16,6 +16,7 @@ const Landingpage = () => {
         <Accesoriespage />
         <Ecopage />
         <Footer />
+        
       </div>
     </div>
   );

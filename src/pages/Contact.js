@@ -31,7 +31,7 @@ const Contact = () => {
     // Validate name
     // Uncomment to validate name
     // if (!namePattern.test(formData.name)) {
-    //   newError.name = "Please enter a valid name";
+    //   newError.name = "Please enter a valid name"; // Error if name is invalid
     // }
 
     // Validate email
@@ -59,24 +59,38 @@ const Contact = () => {
   };
 
   // Function to handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
-    const validationErrors = formValidator(); // Validate form inputs
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const validationErrors = formValidator();
     if (Object.keys(validationErrors).length === 0) {
-      // If no validation errors
-      toast.success("Form submitted successfully"); // Show success toast
-      console.log("Form submission complete"); // Log success message
-      // Reset form data to empty strings
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-      setErrors({}); // Clear any previous errors
+      try {
+        const response = await fetch("http://localhost:3000/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          toast.success("Form submitted successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+          setErrors({});
+        } else {
+          toast.error("Error sending email.");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        toast.error("Error sending email.");
+      }
     } else {
-      setErrors(validationErrors); // Set errors state if validation fails
-      toast.error("Invalid form submission"); // Show error toast
+      setErrors(validationErrors);
+      toast.error("Invalid form submission");
     }
   };
 
@@ -130,9 +144,8 @@ const Contact = () => {
                 required // Make this field required
               />
               {errors.email && (
-                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-              )}{" "}
-              {/* Show email error if exists */}
+                <p className="text-red-500 text-sm mt-1">{errors.email}</p> // Show email error if exists
+              )}
             </div>
             <div className="flex flex-col">
               <label htmlFor="subject" className="mb-2" required>
@@ -150,9 +163,8 @@ const Contact = () => {
                 required // Make this field required
               />
               {errors.subject && (
-                <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
-              )}{" "}
-              {/* Show subject error if exists */}
+                <p className="text-red-500 text-sm mt-1">{errors.subject}</p> // Show subject error if exists
+              )}
             </div>
             <div className="flex flex-col">
               <label htmlFor="message" className="mb-2" required>
@@ -170,9 +182,8 @@ const Contact = () => {
                 required // Make this field required
               />
               {errors.message && (
-                <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-              )}{" "}
-              {/* Show message error if exists */}
+                <p className="text-red-500 text-sm mt-1">{errors.message}</p> // Show message error if exists
+              )}
             </div>
             <button className="flex justify-center p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300">
               Submit

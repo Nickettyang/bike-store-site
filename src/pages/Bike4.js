@@ -1,39 +1,69 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import image4 from "../images/bicycle-5-800x800.jpg";
+import React, { useContext } from "react"; // Import useContext
+import { CartContext } from "../components/Cartcontext"; // Import CartContext
+import { toast } from "react-toastify"; // Import toast for notifications
+import "react-toastify/dist/ReactToastify.css"; // Import toast styles
+
 const Bike1 = () => {
+  // Use the CartContext to get the addToCart function
+  const { addToCart } = useContext(CartContext);
+
+  // Define the product details
+  const product = {
+    id: 4, // Unique ID for the product
+    name: "Kryo-X26-MB",
+    price: 350.0,
+    image: image4,
+    description:
+      "Discover the Kryo X26 MB, your ideal companion for rugged trails! With a lightweight aluminum frame and advanced suspension, it offers comfort and control on any terrain. Conquer climbs effortlessly with 21-speed gearing and all-terrain tires. Stylish and durable, the Kryo X26 invites you to embrace every adventure!",
+  };
+
+  // Handle add to cart with toast notification
+  const handleAddToCart = () => {
+    addToCart(product); // Add product to the cart
+    toast.success(`${product.name} added to cart!`, {
+      position: "top-center", // Notification position
+      autoClose: 3000, // Auto-close after 3 seconds
+      hideProgressBar: true, // Hide the progress bar
+      closeOnClick: true, // Close on click
+      pauseOnHover: true, // Pause on hover
+    });
+  };
+
   return (
     <div>
-      <div>
-        <Navbar />
-      </div>
+      <Navbar />
       <div className="flex items-center justify-center p-10">
         <div className="grid grid-cols-12 gap-4">
+          {/* Product Image */}
           <div className="col-span-6 flex justify-center">
             <img
-              src={image4}
-              alt=""
+              src={product.image}
+              alt={product.name}
               className="max-w-full h-auto rounded-lg shadow-lg transition-transform transform hover:scale-105"
             />
           </div>
+
+          {/* Product Details */}
           <div className="col-span-6 p-6">
             <h1 className="text-4xl font-bold italic mb-4 text-gray-900">
-              Kryo-X26-MB
+              {product.name}
             </h1>
             <div className="text-2xl font-semibold text-gray-800 mb-4">
-              $350.00
+              ${product.price.toFixed(2)}
             </div>
 
             <p className="mb-6 text-gray-700 leading-relaxed">
-              Discover the <strong>Kryo X26 MB</strong>, your ideal companion
-              for rugged trails! With a lightweight aluminum frame and advanced
-              suspension, it offers comfort and control on any terrain. Conquer
-              climbs effortlessly with 21-speed gearing and all-terrain tires.
-              Stylish and durable, the Kryo X26 invites you to embrace every
-              adventure!
+              {product.description}
             </p>
 
-            <button className="bg-gray-800 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-gray-700 transition duration-300">
+            {/* Add to Cart Button */}
+            <button
+              className="bg-gray-800 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-gray-700 transition duration-300"
+              onClick={handleAddToCart} // Trigger add to cart and toast notification
+            >
               ADD TO CART
             </button>
           </div>
