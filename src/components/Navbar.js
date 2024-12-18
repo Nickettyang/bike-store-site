@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import logo from "../images/logo-1-80x48.png";
-import Cart from "../pages/Cart";
 
 const Navbar = () => {
   return (
     <div className="flex justify-between pt-3 font-bold bg-black">
-      <Link to="/"><img src={logo} alt="Logo" /></Link>
+      <Link to="/">
+        <img src={logo} alt="Logo" />
+      </Link>
       <ul className="text-white flex">
         <Link to="/">
           <li className="px-3 hover:cursor-pointer">HOME</li>
