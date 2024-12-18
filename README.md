@@ -1,70 +1,161 @@
-# Getting Started with Create React App
+Here’s the updated README without Docker and Axios:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# Bike Store E-Commerce
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Tech Stack](#tech-stack)
+4. [Installation](#installation)
+   - [Prerequisites](#prerequisites)
+   - [Backend Setup](#backend-setup)
+   - [Frontend Setup](#frontend-setup)
+5. [Usage](#usage)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Contact](#contact)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Bike Store E-Commerce project is a full-stack application designed for bike enthusiasts. Built using the MERN stack (MongoDB, Express.js, React, Node.js) and styled with Tailwind CSS, this application allows users to browse, select, and purchase bikes seamlessly. The platform offers a user-friendly experience with robust features for both customers and administrators.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **User Authentication**: Secure registration and login processes for managing user accounts.
+- **Product Browsing**: Users can explore a variety of bikes, complete with detailed descriptions and high-quality images.
+- **Shopping Cart**: Users can easily add bikes to their cart, adjust quantities, and view the total price before checkout.
+- **Order Management**: Users can view their order history and details.
+- **Admin Dashboard**: A dedicated interface for administrators to manage products, including adding, editing, and removing bike listings.
+- **Responsive Design**: Fully responsive layout optimized for both mobile and desktop devices, leveraging Tailwind CSS for styling.
+- **Search and Filter**: Users can search for bikes by name and filter results based on categories and price.
+- **Payment Integration**: Supports payment processing (e.g., with Stripe or PayPal) for a smooth checkout experience.
 
-### `npm run build`
+## Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**: 
+  - React.js: For building the user interface
+  - Redux: For state management
+  - React Router: For navigation
+  - Tailwind CSS: For modern, utility-first styling
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Backend**: 
+  - Node.js: JavaScript runtime for the server
+  - Express.js: Web framework for building APIs
+  - MongoDB: NoSQL database for storing user and product data
+  - Mongoose: ODM for MongoDB
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Development Tools**: 
+  - Git: Version control
+  - Postman: API testing
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Node.js**: Ensure you have Node.js and npm installed. You can download it from [nodejs.org](https://nodejs.org/).
+- **MongoDB**: Set up a MongoDB database, either locally or via a cloud service like MongoDB Atlas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Backend Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clone the repository**:
 
-## Learn More
+   ```bash
+   git clone https://github.com/yourusername/bike-store-ecommerce.git
+   cd bike-store-ecommerce
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Navigate to the backend directory**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   cd backend
+   ```
 
-### Code Splitting
+3. **Install backend dependencies**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   npm install
+   ```
 
-### Analyzing the Bundle Size
+4. **Create a `.env` file in the backend directory** with the following content:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+   PORT=5000
+   ```
 
-### Making a Progressive Web App
+5. **Start the backend server**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+   npm start
+   ```
 
-### Advanced Configuration
+### Frontend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. **Navigate to the frontend directory**:
 
-### Deployment
+   ```bash
+   cd ../frontend
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. **Install frontend dependencies**:
 
-### `npm run build` fails to minify
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. **Start the React application**:
+
+   ```bash
+   npm start
+   ```
+
+4. **Visit the Application**: Open your browser and navigate to `http://localhost:3000`.
+
+## Usage
+
+1. **User Registration**: Users can create an account by providing their details. After registration, they can log in to access the site.
+2. **Browsing Products**: Users can navigate through the product listings, filter results, and search for specific bikes.
+3. **Shopping Cart Management**: Users can add products to their cart, view the cart, and adjust quantities as needed.
+4. **Checkout Process**: Users can complete their purchase using integrated payment options (if set up).
+5. **Admin Dashboard**: Admins can log in to manage product listings, view order details, and handle user inquiries.
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. **Fork the repository**.
+2. **Create a new branch**:
+
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+
+3. **Make your changes and commit them**:
+
+   ```bash
+   git commit -m 'Add some feature'
+   ```
+
+4. **Push to your branch**:
+
+   ```bash
+   git push origin feature/YourFeature
+   ```
+
+5. **Open a pull request** on the main repository.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or feedback, please reach out to [your_email@example.com](mailto:your_email@example.com).
+
+---
+
+Let me know if you need any further changes or additions!
